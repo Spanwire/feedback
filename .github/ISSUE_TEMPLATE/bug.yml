@@ -1,0 +1,33 @@
+name: Bug report
+description: Something in Spanwire doesn't work as documented
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: This issue is public. Leave out agent tokens, license files and message contents. Report security problems to hello@spanwire.app instead.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where
+      options:
+        - spanwire.app (hosted)
+        - Self-hosted
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version (self-hosted) and MCP client
+      placeholder: e.g. image tag, Claude Code 2.x
